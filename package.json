@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "karma start",
-    "start": "nodemon server/server.js --exec babel-node presets es2015"
+    "start": "nodemon server/server.js --exec babel-node presets es2015",
+    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
   },
   "repository": {
     "type": "git",
