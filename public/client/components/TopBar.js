@@ -15,8 +15,8 @@ export default class TopBar extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <NavItem eventKey={1} href="#/user">Find a Job</NavItem>
-            <NavItem eventKey={2} href="#/overview">Post a Job</NavItem>
+            <NavItem eventKey={1} href="#/jobs">Find a Job</NavItem>
+            <NavItem eventKey={2} href="#/hire">Post a Job</NavItem>
             <NavItem eventKey={3} ><LoginButton/></NavItem>
           </Nav>
         </Navbar.Collapse>
