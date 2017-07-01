@@ -1,0 +1,54 @@
+.navbar {
+  position: relative;
+  min-height: 70px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  background-color: black;
+}
+
+.Welcome {
+	background-image: url("../images/wonoloLanding.jpg");
+	background-size: cover; 
+	height: 650px;
+}
+
+.Businesses {
+	background-color: white;
+	height: 450px;
+}
+
+.businessFacts {
+	float: left;
+  height: 350px;
+  display: inline-block;
+  left: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.BigLogo {
+	margin: auto;
+	display: block;
+	left: 0px;
+	top: 0px;
+}
+
+.jumbotron {
+	margin: 0px;
+	padding: 20px;
+}
+
+.Review {
+  height: 350px;
+  width: 40%;
+  display: inline-block;
+  float: right;
+}
+
+.navbar {
+  position: relative;
+  min-height: 80px;
+  margin-bottom: 0;
+  border: 1px solid transparent;
+  background-color: black;
+}

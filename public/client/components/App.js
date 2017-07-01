@@ -1,5 +1,17 @@
 import React from 'react';
+import LandingPage from './LandingPage/LandingPage.js';
 
-class App extends React.Component {
-	
+export default class App extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {};
+	}
+
+	render() {
+		return (
+				<div className="App">
+					<LandingPage />
+				</div>
+			)
+	}
 }
