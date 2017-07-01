@@ -13,7 +13,6 @@ export default class Welcome extends React.Component {
 		return (
 				<Jumbotron className="Welcome">
 					<div className="inWelcome">
-						<h2>welcome to</h2>
 						<img className="BigLogo" src="https://www.jobsondemand.com/wp-content/uploads/2016/09/wonolo.png"/>
 						<WorkButton style={"splashButton"}/>
 						<HireButton style={"splashButton"} />
