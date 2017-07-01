@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class FindJobs extends React.Component {
+export default class JobsView extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
@@ -8,7 +8,7 @@ export default class FindJobs extends React.Component {
 
 	render() {
 		return (
-				<div className="FindJobs">
+				<div className="JobsView">
 				</div>
 			)
 	}

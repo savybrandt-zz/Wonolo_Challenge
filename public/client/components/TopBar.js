@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown, NavItem, MenuItem } from 'react-bootstrap';
 import { Link } from 'react-router'
+import LoginButton from "./Login/LoginButton.js";
 
 export default class TopBar extends React.Component {
   render() {
@@ -16,7 +17,7 @@ export default class TopBar extends React.Component {
           <Nav pullRight>
             <NavItem eventKey={1} href="#/user">Find a Job</NavItem>
             <NavItem eventKey={2} href="#/overview">Post a Job</NavItem>
-            <NavItem eventKey={3} href="#/exercise">Login</NavItem>
+            <NavItem eventKey={3} ><LoginButton/></NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
