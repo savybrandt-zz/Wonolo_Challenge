@@ -4,6 +4,18 @@ body {
 	color: black;
 }
 
+.yellow, .yellowlogin {
+	background: #FFDC00;
+	color: black;
+	border: none;
+}
+
+.yellowlogin:hover, .yellowlogin:after {
+	background: black;
+	border: solid #FFDC00 1px;
+	color: #FFDC00;
+}
+
 .navbar {
   position: relative;
   min-height: 70px;

@@ -11,7 +11,7 @@ export default class WorkButton extends React.Component {
 
 	render() {
 		return (
-				<Link to="/jobs"><Button className={this.props.style}>Work</Button></Link>
+				<Link to="/jobs"><Button bsStyle="warning" className={this.props.style}>Work</Button></Link>
 			)
 	}
 }

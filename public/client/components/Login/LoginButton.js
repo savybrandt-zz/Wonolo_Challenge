@@ -2,8 +2,6 @@ import React from 'react';
 import { Button, ButtonToolbar } from 'react-bootstrap';
 import { Link } from 'react-router';
 import LoginModal from "./LoginModal.js";
-import Login from "./Login";
-import Signup from "./Signup"
 
 export default class LoginButton extends React.Component {
 	constructor(props) {
@@ -12,7 +10,7 @@ export default class LoginButton extends React.Component {
 	}
 
 	getInitialState() {
-    return { show: false};
+    return { show: false, login: false};
   }
 
   render() {
@@ -20,14 +18,14 @@ export default class LoginButton extends React.Component {
 
     return (
       <ButtonToolbar>
-        <Button bsStyle="warning" onClick={()=>this.setState({ show: true, body: <Signup/> })}>
+        <Button bsStyle="warning" className="yellowlogin" onClick={()=>this.setState({ show: true, login: false })}>
           Sign up
         </Button>
-        <Button bsStyle="link" onClick={()=>this.setState({ show: true, body: <Login/>})}>
+        <Button bsStyle="link" onClick={()=>this.setState({ show: true, login: true })}>
           Login
         </Button>
 
-        <LoginModal show={this.state.show} onHide={close} body={this.state.body}/>
+        <LoginModal show={this.state.show} onHide={close} login={this.state.login}/>
       </ButtonToolbar>
     );
   }}
