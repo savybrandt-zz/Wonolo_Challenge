@@ -1,8 +1,6 @@
 import React from 'react';
-import TopBar from '../TopBar.js';
 import Welcome from './Welcome.js';
 import About from './About.js';
-import BottomBar from '../BottomBar.js';
 
 
 export default class LandingPage extends React.Component {
@@ -14,10 +12,8 @@ export default class LandingPage extends React.Component {
   render() {
   	return (
   		<div>
-  			<TopBar />
   			<Welcome />
   			<About />
-  			<BottomBar />
   		</div>
   		)
   }
