@@ -59,12 +59,6 @@ export default class Signup extends React.Component {
 
 					    <FormGroup>
 					      <Col smOffset={2} sm={10}>
-					        <Checkbox>Remember me</Checkbox>
-					      </Col>
-					    </FormGroup>
-
-					    <FormGroup>
-					      <Col smOffset={2} sm={10}>
 					        <Button className="yellow" type="submit">
 					          Sign up
 					        </Button>
