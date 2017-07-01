@@ -2,6 +2,9 @@
   "name": "Wonolo_Challenge",
   "version": "1.0.0",
   "description": "Savy Brandt Personal site",
+  "engines": {
+    "npm": "3.10.8"
+  },
   "main": "server.js",
   "scripts": {
     "test": "karma start",
