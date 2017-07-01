@@ -5,18 +5,19 @@ import Review from './Review.js'
 export default class Workers extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {};
+		this.state = {
+		};
 	}
 
 	render() {
 		return (
-			<Jumbotron className="Workers">
-				<div>
-					<h2> For Workers </h2>
-					<img className="businessFacts" src="../images/businessFacts.png"/>
+			<div className="For">
+				<div className={this.props.class}>
+					<h2> For {this.props.display} </h2>
+					<img className="iconFacts" src={this.props.image}/>
 				</div>
-				<Review />
-			</Jumbotron>
+				<Review class={this.props.review}/>
+			</div>
 			)
 	}
 }

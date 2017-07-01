@@ -9,7 +9,7 @@ export default class Review extends React.Component {
 
 	render() {
 		return (
-			<Carousel indicators="false" className="Review">
+			<Carousel indicators={false} controls={false} className={this.props.class}>
 		    <Carousel.Item>
 		      <img src="../images/Inga.png"/>   
 		    </Carousel.Item>

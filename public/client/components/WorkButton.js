@@ -2,7 +2,8 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router';
 
-export default class FindJobButton extends React.Component {
+
+export default class WorkButton extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
@@ -10,9 +11,7 @@ export default class FindJobButton extends React.Component {
 
 	render() {
 		return (
-				<div className="FindJobButton">
-					<Button>Hire</Button>
-				</div>
+				<Link to="/jobs"><Button className={this.props.style}>Work</Button></Link>
 			)
 	}
 }

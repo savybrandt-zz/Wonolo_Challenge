@@ -1,8 +1,7 @@
 import React from 'react';
 import { Jumbotron } from 'react-bootstrap'
-import BigLogo from '../BigLogo.js';
-import FindJobButton from '../FindJobButton.js';
-import PostJobButton from '../PostJobButton.js';
+import WorkButton from '../WorkButton.js';
+import HireButton from '../HireButton.js';
 
 export default class Welcome extends React.Component {
 	constructor(props) {
@@ -13,10 +12,12 @@ export default class Welcome extends React.Component {
 	render() {
 		return (
 				<Jumbotron className="Welcome">
-					<h2>WELCOME TO</h2>
-					<BigLogo />
-					<FindJobButton />
-					<PostJobButton />
+					<div className="inWelcome">
+						<h2>welcome to</h2>
+						<img className="BigLogo" src="https://www.jobsondemand.com/wp-content/uploads/2016/09/wonolo.png"/>
+						<WorkButton style={"splashButton"}/>
+						<HireButton style={"splashButton"} />
+					</div>
 				</Jumbotron>
 			)
 	}

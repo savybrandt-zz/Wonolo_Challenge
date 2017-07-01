@@ -1,3 +1,9 @@
+/* Wonolo-yellow: #FFDC00 */
+
+body {
+	color: black;
+}
+
 .navbar {
   position: relative;
   min-height: 70px;
@@ -9,21 +15,67 @@
 .Welcome {
 	background-image: url("../images/wonoloLanding.jpg");
 	background-size: cover; 
-	height: 650px;
+	height: 600px;
+	border: solid black;
+}
+
+.About {
+	padding-top: 0px;
+  height: 100%;
+}
+
+.padding {
+	padding: 20px;
+}
+
+.carousel {
+  width: 40%;
+}
+
+.iconFacts {
+  padding-top: 15px;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.businessReviews {
+  float: right;
+}
+
+.wonoloerReviews {
+	float: left;
+}
+
+.For {
+  background-color: white;
+  height: 300px;
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.gap {
+  width: 100%;
+  height: 3px;
+  background: black;
+  margin-top: -3px;
+}
+
+.jobSeakers, .Businesses {
+	width: 60%;
+	text-align: center;
+}
+
+.jobSeakers {
+	border-left: solid black;
+	float: right;
 }
 
 .Businesses {
-	background-color: white;
-	height: 450px;
-}
-
-.businessFacts {
-	float: left;
-  height: 350px;
-  display: inline-block;
-  left: 0px;
-  padding: 0px;
-  margin: 0px;
+	border-right: solid black; 
+  float: left;
 }
 
 .BigLogo {
@@ -33,16 +85,27 @@
 	top: 0px;
 }
 
-.jumbotron {
-	margin: 0px;
-	padding: 20px;
+.inWelcome {
+  padding-top: 30px;
+  display: block;
+  margin: auto;
+  height: 90%;
+  text-align: center;
 }
 
-.Review {
-  height: 350px;
-  width: 40%;
-  display: inline-block;
-  float: right;
+.splashButton {
+	background: #FFDC00;
+  border: none;
+  margin: 40px;
+  width: 19%;
+  height: 15%;
+  font-size: xx-large;
+  box-shadow: 1px 1px 15px black;
+  color: black;
+}
+
+.jumbotron {
+	margin: 0px;
 }
 
 .navbar {
