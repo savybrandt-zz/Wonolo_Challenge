@@ -11,13 +11,13 @@ export default class Review extends React.Component {
 		return (
 			<Carousel indicators={false} controls={false} className={this.props.class}>
 		    <Carousel.Item>
-		      <img src="../images/Inga.png"/>   
+		      <img className="reviewImg" src="../images/Inga.jpg"/>   
 		    </Carousel.Item>
 		    <Carousel.Item>
-		      <img src="../images/Minnie.png"/>
+		      <img className="reviewImg" src="../images/Minnie.jpg"/>
 		    </Carousel.Item>
 		    <Carousel.Item>
-		      <img src="../images/Reilly.png"/>
+		      <img className="reviewImg" src="../images/Reilly.jpg"/>
 		    </Carousel.Item>
   		</Carousel>
 			)

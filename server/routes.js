@@ -25,6 +25,13 @@ app.use(express.static('public'));
 
 var wonolo = "https://api.wonolo.com/api_v2/"
 var keys = require("../wonolo.config.js")
+var token = null;
+
+app.get('/', function(req, res) {
+	request('/authenticate/api_key=' + keys.public + '&secret_key=' + keys.secret, function(err, res) {
+  	err ? console.log(err) : console.log(res.body);
+	})
+});
 
 app.get('/jobs/:page/:state', function(req, res) {
   request(wonolo + 'jobs?token=' + token + 'page=' + req.params.page + '&per=18&state=' + req.params.state, function (err, res) { 
