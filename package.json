@@ -15,10 +15,6 @@
     "type": "git",
     "url": "git+https://github.com/savybrandt/Wonolo_Challenge.git"
   },
-  "keywords": [
-    "resume",
-    "personal"
-  ],
   "author": "Savy Brandt",
   "license": "ISC",
   "bugs": {

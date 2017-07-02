@@ -1,11 +1,29 @@
 import React from 'react';
+import axios from'axios';
 import { Table, Pager } from 'react-bootstrap';
+
+var instance = axios.create({
+ 	baseURL: '127.0.0.1:3000',
+});
 
 export default class Grid extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {};
+		this.state = {
+			jobs: [],
+			page: 1,
+			state: "California"
+		};
 	}
+
+	componentDidMount () {
+  	var context = this;
+    axios.get('/jobs/' + context.state.page + '/' + context.state.state)
+    	.then(function(res) {
+      context.setState({jobs: res.data});
+    });
+  }
+
 
 	render() {
 		return (
