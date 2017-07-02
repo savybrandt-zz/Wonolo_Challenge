@@ -3,6 +3,10 @@
 body {
 	color: black;
 }
+ td {
+	height: 340px;
+	width: 340px;
+ }
 
 .yellow, .yellowlogin {
 	background: #FFDC00;
@@ -126,4 +130,31 @@ body {
   margin-bottom: 0;
   border: 1px solid transparent;
   background-color: black;
+}
+
+.BottomBar {
+	height: 200px;
+	background: black;
+	display: block;
+}
+
+.JobsView {
+	height: 1500px;
+	text-align: center;
+	display: block;
+}
+
+.Grid {
+  width: 90%;
+  margin: auto;
+  padding: 30px;
+}
+
+.pager li>a, .pager li>span {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #FFDC00;
+    border: 3px solid #FFDC00;
+    border-radius: 15px;
+    color: black;
 }

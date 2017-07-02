@@ -1,45 +1,30 @@
 import React from 'react';
-import { Table } from 'react-bootstrap';
+import { Jumbotron, Table, FormGroup, Col, FormControl, Button, Form } from 'react-bootstrap';
+import Grid from './Grid.js';
 
 export default class JobsView extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {};
+		this.state = {
+			sort: "ratings"
+		};
 	}
 
 	render() {
 		return (
-				<div className="JobsView">
-				  <Table striped bordered condensed hover responsive>
-				    <thead>
-				      <tr>
-				        <th>#</th>
-				        <th>First Name</th>
-				        <th>Last Name</th>
-				        <th>Username</th>
-				      </tr>
-				    </thead>
-				    <tbody>
-				      <tr>
-				        <td>1</td>
-				        <td>Mark</td>
-				        <td>Otto</td>
-				        <td>@mdo</td>
-				      </tr>
-				      <tr>
-				        <td>2</td>
-				        <td>Jacob</td>
-				        <td>Thornton</td>
-				        <td>@fat</td>
-				      </tr>
-				      <tr>
-				        <td>3</td>
-				        <td colSpan="2">Larry the Bird</td>
-				        <td>@twitter</td>
-				      </tr>
-				    </tbody>
-				  </Table>
-				</div>
+			<div className="JobsView">
+				<Jumbotron className="SearchJobs">
+				<h1>Search Jobs</h1>
+				</Jumbotron>
+				<h3>Work Now Locally</h3>
+				<Form inline>
+				<FormGroup controlId="formHorizontalEmail">
+		        <FormControl type="Zipcode" placeholder="Enter Zip Code" />
+		     	  <Button className="yellow" type="submit">Search Jobs</Button>
+				</FormGroup>
+				</Form>
+				<Grid sort={this.state.sort}/>
+			</div>
 			)
 	}
 }

@@ -12,7 +12,7 @@ export default class Login extends React.Component {
 				<div className="Login">
 					<h1>Login</h1>
 					  <Form horizontal>
-					    <FormGroup controlId="formHorizontalEmail">
+					    <FormGroup controlId="Email">
 					      <Col componentClass={ControlLabel} sm={2}>
 					        Email
 					      </Col>
@@ -21,7 +21,7 @@ export default class Login extends React.Component {
 					      </Col>
 					    </FormGroup>
 
-					    <FormGroup controlId="formHorizontalPassword">
+					    <FormGroup controlId="Password">
 					      <Col componentClass={ControlLabel} sm={2}>
 					        Password
 					      </Col>
