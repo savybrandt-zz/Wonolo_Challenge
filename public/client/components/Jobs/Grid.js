@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from'axios';
-import { Table, Pager } from 'react-bootstrap';
+import { Table, Pager, Pagination } from 'react-bootstrap';
+import { Link } from 'react-router';
 import Tile from './Tile.js';
 
 export default class Grid extends React.Component {
@@ -10,25 +11,31 @@ export default class Grid extends React.Component {
 			jobs: [],
 			page: 1
 		};
+
+		this.handleSelect = this.handleSelect.bind(this);
 	}
 
-	componentDidMount () {
+	distributeRows(data) {
+	  var rows = (data.length + (3 - (data.length % 3)) ) / 3;
+		var jobs = [];
+
+	  for(var i = 0; i < rows; i++) {
+	  	var tiles = [];
+	  	for(var j = (i * 3); j < (i * 3) + 3; j++) {
+	  		tiles.push(data[j]);
+	  	}
+			jobs.push(tiles)
+		}
+		return jobs;
+	}
+
+	componentDidMount() {
   	var context = this;
     axios.get('/jobs/' + context.state.page)
     .then((res) => {
-  		var rows = (res.data.job_requests.length + (3 - (res.data.job_requests.length % 3)) ) / 3;
-  		var jobs = [];
-
-		  for(var i = 0; i < rows; i++) {
-		  	var tiles = [];
-		  	for(var j = (i * 3); j < (i * 3) + 3; j++) {
-		  		tiles.push(res.data.job_requests[j]);
-		  	}
-				jobs.push(tiles)
-			}
+    	var jobs = context.distributeRows(res.data.job_requests);
       context.setState({
       	jobs: jobs, 
-      	page: context.props.page
       });
     })
     .catch((err) => {
@@ -36,11 +43,25 @@ export default class Grid extends React.Component {
     })
   }
 
+  handleSelect(eventKey) {
+   	var context = this;
+  	var page = eventKey;
+  	axios.get('/jobs/' + page)
+  	.then((res) => {
+    	var jobs = context.distributeRows(res.data.job_requests);
+	  	context.setState({
+	  		page: page,
+	  		jobs: jobs
+	  	})
+    	window.scrollTo(0, 0)
+  	})
+  }
+
 	render() {
 
 		return (
 			<div className="Grid">
-			  <Table striped bordered hover responsive>
+			  <Table striped bordered responsive>
 			    <tbody>
 			    	{this.state.jobs.map((row, j) => {
 			    		console.log(row)
@@ -48,10 +69,12 @@ export default class Grid extends React.Component {
 			    			<tr key={j}>
 			    				{row.map((job, i) => {
 			    					if(job) {
-				    					return ( <td>
-				    						<Tile wage={job.wage} position={job.request_name} city={job.city}
-				    						time={job.start_time} duration={job.duration} id={job.id} key={i}/>				
-				    					</td>
+				    					return ( 
+					    					<td>
+						    					<Link to={"/jobs/"+ this.props.id} className="yellow">
+							    					<Tile position={job.request_name} city={job.city} id={job.id} key={i}/>				
+						    					</Link>
+					    					</td>
 				    					)
 			    					}
 			    				})}
@@ -60,11 +83,14 @@ export default class Grid extends React.Component {
 			    	})}
 			    </tbody>
 			  </Table>
-			  <Pager>
-			    <Pager.Item className="yellow" href="#">Previous</Pager.Item>
-			    {' '}
-			    <Pager.Item className="yellow" href="#">Next</Pager.Item>
-			  </Pager>
+			    <Pagination className="yellow"
+		        prev
+		        next
+		        boundaryLinks
+		        items={20}
+		        maxButtons={5}
+		        activePage={this.state.page}
+		        onSelect={this.handleSelect} />
 		  </div>
 			)
 	}

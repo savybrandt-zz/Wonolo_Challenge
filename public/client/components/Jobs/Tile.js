@@ -1,8 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import { Link } from 'react-router';
 
-export default class Job extends React.Component {
+export default class Tile extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
@@ -10,14 +9,10 @@ export default class Job extends React.Component {
 
 	render() {
 		return (
-				<div className="Job">
-					<h3>{this.props.position}</h3><br/>
-					<h4>{this.props.wage}</h4><br/>
-					<p>{this.props.city + " " + this.props.time + " " + this.props.duration}</p>
-					<Link to={"/jobs/"+ this.props.id}>
-						<Button className="yellow"> See More </Button>
-					</Link>
-				</div>
+			<div className="Tile">
+				<h2>{this.props.position}</h2><br/>
+				<h4>{this.props.city}</h4>
+			</div>
 			)
 	}
 }
