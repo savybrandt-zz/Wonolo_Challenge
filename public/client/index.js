@@ -13,7 +13,7 @@ render((
 	  <Router history={hashHistory}>
 	    <Route path="/" component={LandingPage}/>
 	    <Route path="/jobs" component={JobsView}/>
-	    <Route path="/" component={LandingPage}/>
+	    <Route path="/jobs/:id" component={LandingPage}/>
 	  </Router>
 	  <BottomBar />
   </div>
