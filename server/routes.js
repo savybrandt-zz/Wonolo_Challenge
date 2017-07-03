@@ -23,23 +23,14 @@ app.use(express.static('public'));
 //                                  API Requests
 ///////////////////////////////////////////////////////////////////////////////////////
 
-var wonolo = "https://api.wonolo.com/api_v2"
-var token = null;
-
-app.get('/authenticate/:public/:secret', function(req, res) {
-	request(wonolo + '/authenticate/?api_key=' + req.params.public + '&secret_key=' + req.params.secret, function(err, data) {
-  	err ? console.log(err) : console.log('token: ', data);
-  	token = data.token
-	})
-});
+var wonolo = "https://api.wonolo.com/api_v2";
+var token = require('../wonolo.config.js');
 
 app.get('/jobs/:page/:state', function(req, res) {
-  request(wonolo + 'jobs?token=' + token + 'page=' + req.params.page + '&per=18&state=' + req.params.state, function (err, data) { 
-  	err ? console.log(err) : console.log(data.body);
+  request(wonolo + '/jobs/token=' + token + '&page=' + req.params.page + '&per=18&state=' + req.params.state, function (err, data) { 
+  	err ? console.log(err) : console.log('get jobs res:', data.body);
     res.send(data.body);
   })
 });
 
 module.exports = app;
-
-'http://api.wonolo.com/api_v2/authenticate/api_key="pk_live_286iehDFMjLSfKdoE1LM"&secret_key="sk_live_JmEPpdxafZwqi8UwZcnG" '

@@ -7,7 +7,7 @@ export default class Grid extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			jobs: [{company: "Company", position:"Position", date:"July 1, 2017", time:"1:00", duration:"et. duration"}],
+			jobs: [],
 			page: 1,
 			state: "California"
 		};
@@ -16,7 +16,7 @@ export default class Grid extends React.Component {
 	componentDidMount () {
   	var context = this;
     axios.get('/jobs/' + context.state.page + '/' + context.state.state)
-    .then(function(res) {
+    .then((res) => {
   		var rows = (res.data.length + (3 - (res.data.length % 3)) ) / 3;
   		var jobs = [];
 
@@ -33,10 +33,11 @@ export default class Grid extends React.Component {
       	page: context.props.page,
       	state: context.props.state
       });
-
-    });
+    })
+    .catch((err) => {
+    	console.log(err);
+    })
   }
-
 
 	render() {
 
@@ -48,10 +49,11 @@ export default class Grid extends React.Component {
 			    		return (
 			    			<tr>
 			    				{row.map((job) => {
-			    					return (
+			    					return ( <td>
 			    						<Tile company={job.company} position={job.position} date={job.date}
-			    						time={job.time} duration={job.duration} id={job.id} />
-			    						)
+			    						time={job.time} duration={job.duration} id={job.id} />				
+			    					</td>
+			    					)
 			    				})}
 			    			</tr>
 			    			)

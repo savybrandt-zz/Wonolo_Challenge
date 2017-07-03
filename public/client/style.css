@@ -3,6 +3,12 @@
 body {
 	color: black;
 }
+
+.App {
+	height: 100%;
+	width: 100%;
+}
+
  td {
 	height: 340px;
 	width: 340px;
@@ -139,7 +145,7 @@ body {
 }
 
 .JobsView {
-	height: 1500px;
+	height: 100%;
 	text-align: center;
 	display: block;
 }
