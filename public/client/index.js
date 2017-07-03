@@ -6,6 +6,7 @@ import LandingPage from './components/LandingPage/LandingPage';
 import JobsView from "./components/Jobs/JobsView.js";
 import TopBar from "./components/TopBar.js";
 import BottomBar from "./components/BottomBar.js";
+import JobPage from "./components/Jobs/JobPage";
 
 render((
 	<div className="App">
@@ -13,7 +14,7 @@ render((
 	  <Router history={hashHistory}>
 	    <Route path="/" component={LandingPage}/>
 	    <Route path="/jobs" component={JobsView}/>
-	    <Route path="/jobs/:id" component={LandingPage}/>
+	    <Route path="/jobs/:id" component={JobPage}/>
 	  </Router>
 	  <BottomBar />
   </div>

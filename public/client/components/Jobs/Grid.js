@@ -8,30 +8,27 @@ export default class Grid extends React.Component {
 		super(props);
 		this.state = {
 			jobs: [],
-			page: 1,
-			state: "California"
+			page: 1
 		};
 	}
 
 	componentDidMount () {
   	var context = this;
-    axios.get('/jobs/' + context.state.page + '/' + context.state.state)
+    axios.get('/jobs/' + context.state.page)
     .then((res) => {
-  		var rows = (res.data.length + (3 - (res.data.length % 3)) ) / 3;
+  		var rows = (res.data.job_requests.length + (3 - (res.data.job_requests.length % 3)) ) / 3;
   		var jobs = [];
 
 		  for(var i = 0; i < rows; i++) {
 		  	var tiles = [];
 		  	for(var j = (i * 3); j < (i * 3) + 3; j++) {
-		  		tiles.push(res.data[j]);
+		  		tiles.push(res.data.job_requests[j]);
 		  	}
 				jobs.push(tiles)
 			}
-
       context.setState({
       	jobs: jobs, 
-      	page: context.props.page,
-      	state: context.props.state
+      	page: context.props.page
       });
     })
     .catch((err) => {
@@ -45,15 +42,18 @@ export default class Grid extends React.Component {
 			<div className="Grid">
 			  <Table striped bordered hover responsive>
 			    <tbody>
-			    	{this.state.jobs.map((row) => {
+			    	{this.state.jobs.map((row, j) => {
+			    		console.log(row)
 			    		return (
-			    			<tr>
-			    				{row.map((job) => {
-			    					return ( <td>
-			    						<Tile company={job.company} position={job.position} date={job.date}
-			    						time={job.time} duration={job.duration} id={job.id} />				
-			    					</td>
-			    					)
+			    			<tr key={j}>
+			    				{row.map((job, i) => {
+			    					if(job) {
+				    					return ( <td>
+				    						<Tile wage={job.wage} position={job.request_name} city={job.city}
+				    						time={job.start_time} duration={job.duration} id={job.id} key={i}/>				
+				    					</td>
+				    					)
+			    					}
 			    				})}
 			    			</tr>
 			    			)

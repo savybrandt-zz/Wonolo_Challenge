@@ -23,7 +23,7 @@ export default class JobsView extends React.Component {
 		     	  <Button className="yellow" type="submit">Search Jobs</Button>
 				</FormGroup>
 				</Form>
-				<Grid sort={this.state.sort}/>
+				<Grid/>
 			</div>
 			)
 	}

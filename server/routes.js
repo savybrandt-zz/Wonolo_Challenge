@@ -25,12 +25,20 @@ app.use(express.static('public'));
 
 var wonolo = "https://api.wonolo.com/api_v2";
 var token = require('../wonolo.config.js');
+console.log(token);
 
-app.get('/jobs/:page/:state', function(req, res) {
-  request(wonolo + '/jobs/token=' + token + '&page=' + req.params.page + '&per=18&state=' + req.params.state, function (err, data) { 
-  	err ? console.log(err) : console.log('get jobs res:', data.body);
-    res.send(data.body);
-  })
+app.get('/jobs/:page', function(req, res) {
+  request(wonolo + '/job_requests?token=' + token + '&page=' + req.params.page, 
+  	function (err, data) { 
+  		err ? console.log(err) : res.send(data.body);
+  	})
+});
+
+app.get('/job/:id', function(req, res) {
+  request(wonolo + '/job_requests?token=' + token + '&id=' + req.params.id, 
+  	function (err, data) { 
+  		err ? console.log(err) : res.send(data.body);
+  	})
 });
 
 module.exports = app;
