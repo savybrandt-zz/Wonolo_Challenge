@@ -58,7 +58,6 @@ export default class Grid extends React.Component {
   }
 
 	render() {
-
 		return (
 			<div className="Grid">
 			  <Table striped bordered responsive>
@@ -71,8 +70,8 @@ export default class Grid extends React.Component {
 			    					if(job) {
 				    					return ( 
 					    					<td>
-						    					<Link to={"/jobs/"+ this.props.id} className="yellow">
-							    					<Tile position={job.request_name} city={job.city} id={job.id} key={i}/>				
+						    					<Link to={"/jobs/"+ job.id} className="yellow">
+							    					<Tile position={job.request_name} city={job.city} key={i}/>				
 						    					</Link>
 					    					</td>
 				    					)

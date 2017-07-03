@@ -10,7 +10,7 @@ export default class HireButton extends React.Component {
 
 	render() {
 		return (
-				<Button bsStyle="warning" className={this.props.style}>Hire</Button>
+				<Button className={this.props.style}>Hire</Button>
 			)
 	}
 }

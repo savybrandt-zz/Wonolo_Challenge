@@ -28,7 +28,7 @@ var token = require('../wonolo.config.js');
 console.log(token);
 
 app.get('/jobs/:page', function(req, res) {
-  request(wonolo + '/job_requests?token=' + token + '&per=30&page=' + req.params.page + '@state=draft', 
+  request(wonolo + '/job_requests?token=' + token + '&per=21&page=' + req.params.page + '@state=draft', 
   	function (err, data) { 
   		err ? console.log(err) : res.send(data.body);
   	})

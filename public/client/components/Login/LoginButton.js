@@ -18,7 +18,7 @@ export default class LoginButton extends React.Component {
 
     return (
       <ButtonToolbar>
-        <Button bsStyle="warning" className="yellowlogin" onClick={()=>this.setState({ show: true, login: false })}>
+        <Button className="yellowlogin" onClick={()=>this.setState({ show: true, login: false })}>
           Sign up
         </Button>
         <Button bsStyle="link" onClick={()=>this.setState({ show: true, login: true })}>
