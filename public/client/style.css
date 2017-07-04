@@ -1,4 +1,7 @@
-/* Wonolo-yellow: #FFDC00 */
+/* 
+	Wonolo-yellow: #FFDC00 
+	Wonolo-yellow2: #F7D91F
+*/
 
 body {
 	color: black;
@@ -10,9 +13,14 @@ body {
 }
 
  td {
-	height: 340px;
+	height: 297px;
 	width: 340px;
+	border: solid black;
  }
+
+ .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 3px solid black;
+}
 
 .yellow, .yellowlogin {
 	background: #FFDC00;
@@ -21,7 +29,7 @@ body {
 }
 
 .yellow:hover {
-	background: #FFDC00;
+	background: #F7D91F !important;
 	color: black;
 	text-decoration: none;
 }
@@ -51,6 +59,7 @@ body {
 	background-image: url("../images/boxes.jpg");
 	background-size: cover;
 	height: 350px;
+	border-bottom: solid 3px black;
 }
 
 .About {
@@ -64,6 +73,11 @@ body {
 
 .carousel {
   width: 40%;
+  height: 100%;
+}
+
+.carousel.slide {
+  background: #FFDC00;
 }
 
 .iconFacts {
@@ -140,13 +154,12 @@ body {
 
 .splashButton:hover, .splashButton:active  {
   background: black;
-  border: solid #FFDC00 1px;
+  border: solid black 1px;
   margin: 40px;
   width: 15%;
   height: 15%;
   font-size: xx-large;
   color: #FFDC00;
-  box-shadow: 1px 1px 1px black;
 }
 
 .jumbotron {
@@ -200,13 +213,16 @@ body {
   height: 100%;
 }
 
+.Tile:hover {
+	text-decoration: none;
+	font-weight: bolder;
+}
+
 td:hover {
 	background: #FFDC00;
 	cursor: pointer;
 	border: solid black;
 	color: black;
-	text-decoration: none;
-	font-weight: bold;
 }
 
 .pagination>li>a, .pagination>li>span {
@@ -224,7 +240,7 @@ td:hover {
 .pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
     z-index: 2;
     color: black;
-    background-color: #FFDC00;
+    background-color: #F7D91F;
     border-color: darkgrey;
 }
 
@@ -239,6 +255,6 @@ td:hover {
     z-index: 3;
     color: black;
     cursor: default;
-    background: #FFDC00;
+    background: #F7D91F;
     border-color: darkgrey;
 }

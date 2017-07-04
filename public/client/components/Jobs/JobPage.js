@@ -15,7 +15,7 @@ export default class JobPage extends React.Component {
 		axios.get('/job/' + this.props.id)
 		.then((res) => {
 			context.setState({
-				
+
 			})
 		})
 	}
@@ -23,7 +23,7 @@ export default class JobPage extends React.Component {
 	render() {
 		return (
 				<div className="JobPage">
-
+					<Profile />
 				</div>
 			)
 	}
