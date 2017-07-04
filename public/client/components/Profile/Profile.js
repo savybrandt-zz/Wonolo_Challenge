@@ -4,6 +4,8 @@ import Badges from "./Badges.js";
 import Experience from "./Experience.js";
 import Stars from "./Stars.js";
 import Summary from "./Summary.js";
+import TopBar from "../TopBar.js";
+import BottomBar from "../BottomBar.js";
 
 export default class WorkButton extends React.Component {
 	constructor(props) {
@@ -32,6 +34,7 @@ export default class WorkButton extends React.Component {
 	render() {
 		return (
 			<div className="Profile">
+			<TopBar />
 				<jumbotron className="yellow" />
 				<img className="ProfilePic" src={this.state.pic} />
 				<div className="profileBar">
@@ -45,6 +48,7 @@ export default class WorkButton extends React.Component {
 					<Jobs />
 					)}
 				<Badges badges={this.state.badges}/>
+				<BottomBar />
 			</div>
 		)
 	}

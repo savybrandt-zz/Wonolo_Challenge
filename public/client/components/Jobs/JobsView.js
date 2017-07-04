@@ -1,6 +1,8 @@
 import React from 'react';
 import { Jumbotron, Table, FormGroup, Col, FormControl, Button, Form } from 'react-bootstrap';
 import Grid from './Grid.js';
+import TopBar from "../TopBar.js";
+import BottomBar from "../BottomBar.js";
 
 export default class JobsView extends React.Component {
 	constructor(props) {
@@ -13,6 +15,7 @@ export default class JobsView extends React.Component {
 	render() {
 		return (
 			<div className="JobsView">
+			<TopBar />
 				<Jumbotron className="SearchJobs">
 				<h1>Search Jobs</h1>
 				</Jumbotron>
@@ -24,6 +27,7 @@ export default class JobsView extends React.Component {
 				</FormGroup>
 				</Form>
 				<Grid/>
+			<BottomBar />
 			</div>
 			)
 	}

@@ -59,7 +59,7 @@ export default class Signup extends React.Component {
 
 					    <FormGroup>
 					      <Col smOffset={2} sm={10}>
-					        <Button className="yellow" type="submit">
+					        <Button className="yellow" type="submit" onClick={this.props.toggleLogin}>
 					          Sign up
 					        </Button>
 					      </Col>

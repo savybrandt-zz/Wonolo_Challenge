@@ -2,6 +2,8 @@ import React from 'react';
 import axios from'axios';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router';
+import TopBar from "../TopBar.js";
+import BottomBar from "../BottomBar.js";
 
 
 export default class JobPage extends React.Component {
@@ -23,7 +25,8 @@ export default class JobPage extends React.Component {
 	render() {
 		return (
 				<div className="JobPage">
-					<Profile />
+					<TopBar />
+					<BottomBar />
 				</div>
 			)
 	}

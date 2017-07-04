@@ -25,7 +25,7 @@ export default class LoginButton extends React.Component {
           Login
         </Button>
 
-        <LoginModal show={this.state.show} onHide={close} login={this.state.login}/>
+        <LoginModal show={this.state.show} onHide={close} login={this.state.login} toggleLogin={this.props.toggleLogin.bind(null)}/>
       </ButtonToolbar>
     );
   }}

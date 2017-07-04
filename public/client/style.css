@@ -29,13 +29,13 @@ body {
 	border: none;
 }
 
-.yellow:hover {
+.yellow:hover, .yellow:active, .yellow:visited {
 	background: #F7D91F !important;
 	color: black;
 	text-decoration: none;
 }
 
-.yellowlogin:hover, .yellowlogin:after {
+.yellowlogin:hover, .yellowlogin:active {
 	background: black;
 	border: solid #FFDC00 1px;
 	color: #FFDC00;
@@ -259,3 +259,32 @@ td:hover {
     background: #F7D91F;
     border-color: darkgrey;
 }
+
+
+.navbar-right .dropdown-menu {
+    right: 0;
+    left: auto;
+    background: #F7D91F;
+    color: black;
+}
+
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
+    color: #333;
+    background-color: #F7D91F;
+    border-color: #8c8c8c;
+}
+
+.dropdown-menu .divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    color: black;
+    text-decoration: none;
+    background: #F7D91F;
+    font-weight: bold;
+}
+
