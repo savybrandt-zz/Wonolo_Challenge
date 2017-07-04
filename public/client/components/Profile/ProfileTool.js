@@ -28,10 +28,10 @@ export default class HireButton extends React.Component {
 	render() {
 		return (
 			<DropdownButton title={this.state.user || "Savy"} className="yellow">
-		    <MenuItem eventKey="1"><Link to={"/" + this.state.id} className="yellow">Profile</Link></MenuItem>
-		    <MenuItem eventKey="2"><Link to={"/" + this.state.id + '/jobs'} className="yellow">My Jobs</Link></MenuItem>
-		    <MenuItem divider />
-		    <MenuItem onClick={this.props.toggleLogin.bind(null, null)}><Link to="/" className="yellow">Logout</Link></MenuItem>
+		    <MenuItem id="Profile" eventKey="1"><Link to={"/" + this.state.id} className="yellow">Profile</Link></MenuItem>
+		    <MenuItem id="My Jobs" eventKey="2"><Link to={"/" + this.state.id + '/jobs'} className="yellow">My Jobs</Link></MenuItem>
+		    <MenuItem id="divider" divider />
+		    <MenuItem id="Login Options" onClick={this.props.toggleLogin.bind(null, null)}><Link to="/" className="yellow">Logout</Link></MenuItem>
 		  </DropdownButton>
 			)
 	}
