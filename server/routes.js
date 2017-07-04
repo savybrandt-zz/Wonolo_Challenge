@@ -25,7 +25,6 @@ app.use(express.static('public'));
 
 var wonolo = "https://api.wonolo.com/api_v2";
 var token = require('../wonolo.config.js');
-console.log(token);
 
 app.get('/jobs/:page', function(req, res) {
   request(wonolo + '/job_requests?token=' + token + '&per=21&page=' + req.params.page + '@state=draft', 
@@ -36,6 +35,13 @@ app.get('/jobs/:page', function(req, res) {
 
 app.get('/job/:id', function(req, res) {
   request(wonolo + '/job_requests?token=' + token + '&id=' + req.params.id, 
+  	function (err, data) { 
+  		err ? console.log(err) : res.send(data.body);
+  	})
+});
+
+app.get('/user/:id', function(req, res) {
+  request(wonolo + '/users/' + req.params.id + '?token=' + token + '&id=' + req.params.id, 
   	function (err, data) { 
   		err ? console.log(err) : res.send(data.body);
   	})
