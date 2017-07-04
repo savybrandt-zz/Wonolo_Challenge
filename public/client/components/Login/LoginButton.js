@@ -12,8 +12,7 @@ export default class LoginButton extends React.Component {
 	getInitialState() {
     return { 
     	show: false, 
-    	login: false,
-
+    	login: false
     };
   }
 
@@ -28,7 +27,6 @@ export default class LoginButton extends React.Component {
         <Button bsStyle="link" className="Link" onClick={()=>this.setState({ show: true, login: true })}>
           Login
         </Button>
-
         <LoginModal show={this.state.show} onHide={close} login={this.state.login} toggleLogin={this.props.toggleLogin.bind(null)}/>
       </ButtonToolbar>
     );

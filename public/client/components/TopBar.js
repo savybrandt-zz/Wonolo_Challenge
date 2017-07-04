@@ -8,14 +8,16 @@ export default class TopBar extends React.Component {
 		constructor(props) {
 		super(props);
 		this.state = {
-			user: false
+			user: false,
+			email: "yong@wonolo.com"
 		};
-		this.toggleLogin = this.toggleLogin.bind(this);
 	}
 
-	toggleLogin() {
+	toggleLogin(email) {
+		console.log('email: ', email)
 		this.setState({
-			user: !this.state.user
+			user: !this.state.user,
+			email: email
 		})
 	}
 
@@ -32,7 +34,7 @@ export default class TopBar extends React.Component {
           <Nav pullRight>
             <NavItem eventKey={1}><Link to="/jobs" className="Link">Find a Job</Link></NavItem>
             <NavItem eventKey={2}><Link to={this.state.user ? "/" + this.props.id + "/jobs" : "/"} className="Link">Post a Job</Link></NavItem>
-            <NavItem eventKey={3} >{this.state.user ? (<ProfileTool toggleLogin={this.toggleLogin}/>) : (<LoginButton toggleLogin={this.toggleLogin}/>)}</NavItem>
+            <NavItem eventKey={3} >{this.state.user ? (<ProfileTool email={this.state.email} toggleLogin={this.toggleLogin.bind(this)}/>) : (<LoginButton toggleLogin={this.toggleLogin.bind(this)}/>)}</NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

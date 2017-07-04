@@ -47,4 +47,11 @@ app.get('/user/:id', function(req, res) {
   	})
 });
 
+app.get('/users/:email', function(req, res) {
+  request(wonolo + '/users?token=' + token + '&email=' + req.params.email, 
+  	function (err, data) { 
+  		err ? console.log(err) : res.send(data.body);
+  	})
+});
+
 module.exports = app;

@@ -5,6 +5,15 @@ export default class Login extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
+
+		this.handleChange = this.handleChange.bind(this);
+	}
+
+	handleChange(e) {
+		console.log('email: ', e.target.value)
+		this.setState({
+			email: e.target.value
+		})
 	}
 
 	render() {
@@ -17,7 +26,7 @@ export default class Login extends React.Component {
 					        Email
 					      </Col>
 					      <Col sm={10}>
-					        <FormControl type="email" placeholder="Email" />
+					        <FormControl type="email" onChange={this.handleChange} placeholder="Email" />
 					      </Col>
 					    </FormGroup>
 
@@ -38,7 +47,7 @@ export default class Login extends React.Component {
 
 					    <FormGroup>
 					      <Col smOffset={2} sm={10}>
-					        <Button className="yellow" type="submit" onClick={this.props.toggleLogin}>
+					        <Button className="yellow" type="submit" onClick={this.props.toggleLogin.bind(null, this.state.email)}>
 					          Sign in
 					        </Button>
 					      </Col>
