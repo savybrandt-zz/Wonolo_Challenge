@@ -24,6 +24,7 @@ body {
 
 .yellow, .yellowlogin {
 	background: #FFDC00;
+	border: solid #FFDC00 1px;
 	color: black;
 	border: none;
 }

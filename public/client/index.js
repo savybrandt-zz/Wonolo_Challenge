@@ -15,6 +15,7 @@ render((
 	    <Route path="/" component={LandingPage}/>
 	    <Route path="/jobs" component={JobsView}/>
 	    <Route path="/jobs/:id" component={JobPage}/>
+	    <Route path="/users/:id" component={Profile}/>
 	  </Router>
 	  <BottomBar />
   </div>
