@@ -1,13 +1,14 @@
 import React from 'react';
-import { Jumbotron, Image } from 'react-bootstrap';
+import { Jumbotron, Image, Panel } from 'react-bootstrap';
 import axios from 'axios';
 import Badges from "./Badges.js";
-import Experience from "./Experience.js";
+import About from "./About.js";
 import Stars from "./Stars.js";
 import Summary from "./Summary.js";
 import TopBar from "../TopBar.js";
 import BottomBar from "../BottomBar.js";
 import EmployerJobs from "./EmployerJobs.js";
+import SocialBar from "./SocialBar.js";
 
 export default class WorkButton extends React.Component {
 	constructor(props) {
@@ -51,11 +52,15 @@ export default class WorkButton extends React.Component {
 						<h2>{this.state.name}</h2>
 						<h4>{this.state.wonoloer ? "Wonoloer " : "Company " + "● " + this.state.city}</h4>
 						<Summary />
+						<SocialBar />
 					</div>
+					<Panel>
+					<About />
 					{this.state.wonoloer ? (
 						<Badges badges={this.state.badges}/>) : (
 						<EmployerJobs id={this.props.id}/>
 						)}
+					</Panel>
 				</div>
 				<BottomBar />
 			</div>

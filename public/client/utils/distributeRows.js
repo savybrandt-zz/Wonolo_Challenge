@@ -9,5 +9,7 @@ export default function distributeRows(data, cols) {
 	  	}
 			sets.push(tiles)
 		}
+		console.log('distributeRows IN: ', data)
+		console.log('distributeRows OUT: ', sets)
 		return sets;
 	}
