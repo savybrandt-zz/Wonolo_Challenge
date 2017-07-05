@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Savy Brandt Personal site",
   "engines": {
-    "npm": "3.10.8"
+    "npm": "3.10.8",
+    "node": "v6.9.1"
   },
   "main": "server.js",
   "scripts": {
