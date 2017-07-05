@@ -45,9 +45,9 @@ export default class Badges extends React.Component {
 			    				{row.map((badge, i) => {
 			    					if(badge) {
 				    					return ( 
-					    					<div>
-						    					<h4>{badge.name}</h4>
-						    					<img src={badge.icon_url} />
+					    					<div className="badge">
+						    					<h6>{badge.name}</h6>
+						    					<img src={badge.icon_url} style={{height: 100, width: 100}}/>
 					    					</div>
 				    					)
 			    					}

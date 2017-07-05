@@ -22,8 +22,6 @@ export default class JobPage extends React.Component {
 			var description = parseDescription.call(null, res.data.job_request.description);
 			console.log('description: ', description)
 			return {job: res.data.job_request, description: description};
-		})
-		.then((res) => {
 			context.setState({
 				 position: res.job.request_name,
 				 category: res.job.category,
