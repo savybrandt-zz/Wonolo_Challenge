@@ -27,14 +27,14 @@ var wonolo = "https://api.wonolo.com/api_v2";
 var token = require('../wonolo.config.js');
 
 app.get('/jobs/:page', function(req, res) {
-  request(wonolo + '/job_requests?token=' + token + '&per=21&page=' + req.params.page + '@state=draft', 
+  request(wonolo + '/job_requests?token=' + token + '&per=21&page=' + req.params.page + '&state=approved', 
   	function (err, data) { 
   		err ? console.log(err) : res.send(data.body);
   	})
 });
 
 app.get('/job/:id', function(req, res) {
-  request(wonolo + '/job_requests?token=' + token + '&id=' + req.params.id, 
+  request(wonolo + '/job_requests/' + req.params.id + '?token=' + token, 
   	function (err, data) { 
   		err ? console.log(err) : res.send(data.body);
   	})

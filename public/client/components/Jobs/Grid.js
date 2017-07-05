@@ -58,7 +58,7 @@ export default class Grid extends React.Component {
 				    					return ( 
 					    					<td>
 						    					<Link to={"/jobs/"+ job.id} className="yellow">
-							    					<Tile position={job.request_name} city={job.city} key={i}/>				
+							    					<Tile position={job.request_name} wage={job.wage} city={job.city} key={i}/>				
 						    					</Link>
 					    					</td>
 				    					)

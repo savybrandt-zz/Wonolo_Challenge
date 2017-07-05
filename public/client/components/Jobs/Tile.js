@@ -10,8 +10,8 @@ export default class Tile extends React.Component {
 	render() {
 		return (
 			<div className="Tile">
-				<h2>{this.props.position}</h2><br/>
-				<h4>{this.props.city}</h4>
+				<h3>{this.props.position}</h3><br/>
+				<h4>{"$" + this.props.wage + " " + this.props.city}</h4>
 			</div>
 			)
 	}

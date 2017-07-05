@@ -12,7 +12,7 @@ export default class Badges extends React.Component {
 		}
 	}
 
-	componentDidMount() {
+	componentWillMount() {
 		var list = this.props.badges;
 		console.log('list: ', list)
 		var badges = []
@@ -21,7 +21,7 @@ export default class Badges extends React.Component {
 			axios.get('/badges/' + list[i].badge_id)
 			.then((res, i) => {
 				badges.push(res.data.badge);
-				var data = distributeRows.bind(null, badges, (badges.length < 5 ? badges.length : 5) );
+				var data = distributeRows.call(null, badges, (badges.length < 5 ? badges.length : 5) );
 				this.setState({
 					badges: data
 				})
