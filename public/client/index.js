@@ -10,7 +10,7 @@ import Profile from "./components/Profile/Profile.js";
 render((
 	<div className="App">
 	  <Router history={hashHistory}>
-	    <IndexRoute component={LandingPage}/>
+	    <Route path="/" component={LandingPage}/>
 	    <Route path="/jobs" component={JobsView}/>
 	    <Route path="/jobs/:id" component={JobPage}/>
 	    <Route path="/:id" component={Profile}/>
