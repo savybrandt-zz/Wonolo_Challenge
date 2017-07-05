@@ -3,6 +3,7 @@ import axios from'axios';
 import { Table, Pager, Pagination } from 'react-bootstrap';
 import { Link } from 'react-router';
 import Tile from './Tile.js';
+import distributeRows from '../../utils/distributeRows.js';
 
 export default class Grid extends React.Component {
 	constructor(props) {
@@ -15,25 +16,11 @@ export default class Grid extends React.Component {
 		this.handleSelect = this.handleSelect.bind(this);
 	}
 
-	distributeRows(data) {
-	  var rows = (data.length + (3 - (data.length % 3)) ) / 3;
-		var jobs = [];
-
-	  for(var i = 0; i < rows; i++) {
-	  	var tiles = [];
-	  	for(var j = (i * 3); j < (i * 3) + 3; j++) {
-	  		tiles.push(data[j]);
-	  	}
-			jobs.push(tiles)
-		}
-		return jobs;
-	}
-
 	componentDidMount() {
   	var context = this;
     axios.get('/jobs/' + context.state.page)
     .then((res) => {
-    	var jobs = context.distributeRows(res.data.job_requests);
+    	var jobs = distributeRows(res.data.job_requests, 3);
       context.setState({
       	jobs: jobs, 
       });
@@ -48,7 +35,7 @@ export default class Grid extends React.Component {
   	var page = eventKey;
   	axios.get('/jobs/' + page)
   	.then((res) => {
-    	var jobs = context.distributeRows(res.data.job_requests);
+    	var jobs = distributeRows(res.data.job_requests, 3);
 	  	context.setState({
 	  		page: page,
 	  		jobs: jobs

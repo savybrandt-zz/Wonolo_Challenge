@@ -54,4 +54,11 @@ app.get('/users/:email', function(req, res) {
   	})
 });
 
+app.get('/badges/:id', function(req, res) {
+  request(wonolo + '/badges/' + req.params.id + '?token=' + token, 
+  	function (err, data) { 
+  		err ? console.log(err) : res.send(data.body);
+  	})
+});
+
 module.exports = app;

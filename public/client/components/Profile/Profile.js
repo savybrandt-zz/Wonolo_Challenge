@@ -31,7 +31,7 @@ export default class WorkButton extends React.Component {
 				rating: res.data.user.rating,
 				city: res.data.user.city,
 				wonoloer: wonoloer,
-				badges: res.data.user.badges
+				badges: res.data.user.user_badges
 			})
 		})
 		.catch((err) => {
@@ -49,14 +49,13 @@ export default class WorkButton extends React.Component {
 					<Stars rating={this.state.rating}/>
 					<div className="profileBar">
 						<h2>{this.state.name}</h2>
-						<h4>{this.state.city || "San Francisco"}</h4>
+						<h4>{this.state.wonoloer ? "Wonoloer " : "Company " + "● " + this.state.city}</h4>
 						<Summary />
 					</div>
 					{this.state.wonoloer ? (
-						<Experience />) : (
+						<Badges badges={this.state.badges}/>) : (
 						<EmployerJobs id={this.props.id}/>
 						)}
-					<Badges badges={this.state.badges}/>
 				</div>
 				<BottomBar />
 			</div>
