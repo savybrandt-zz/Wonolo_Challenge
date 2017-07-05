@@ -24,7 +24,8 @@ app.use(express.static('public'));
 ///////////////////////////////////////////////////////////////////////////////////////
 
 var wonolo = "https://api.wonolo.com/api_v2";
-var token = require('../wonolo.config.js');
+//var token = require('../wonolo.config.js');
+var token = "apJxghvUyTxg4QHGLMQQ";
 
 app.get('/jobs/:page', function(req, res) {
   request(wonolo + '/job_requests?token=' + token + '&per=21&page=' + req.params.page + '&state=approved', 
