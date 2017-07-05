@@ -15,7 +15,7 @@ export default class Stars extends React.Component {
 					edit={false}
 					size={30}
 					color2={'#F7D91F'} />
-				<h6>{Math.round(this.props.rating * 10) / 10}</h6>
+				{/* <h5>{Math.round(this.props.rating * 10) / 10}</h5> */}
 			</div>
 			)
 	}

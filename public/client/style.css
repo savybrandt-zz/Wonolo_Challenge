@@ -17,8 +17,19 @@ body {
 	width: 100%;
 }
 
+.profHeaders {
+  width: 30%;
+  display: inline-block;
+}
+
 .Profile {
 	height: 100%;
+}
+
+.Stars {
+	width: 150px;
+	margin: 0px 0px 0px 25px;
+	display: block;
 }
 
 .banner {
@@ -32,10 +43,10 @@ body {
 }
 
 .profileBar {
-  display: inline-block;
-  height: 150px;
-  width: 70%;
-  padding-left: 20px;
+	height: 200px;
+	width: 90%;
+	margin-top: -200px;
+	margin-left: 220px;
 }
 
  td {
@@ -309,8 +320,10 @@ td:hover {
 }
 
 .img-circle {
-  height: 200px;
-  border-radius: 50%;
-  margin-top: -15%;
-  border: solid;
+	height: 200px;
+	border-radius: 50%;
+	border: solid;
+	position: relative;
+	margin-top: -5%;
+	display: block;
 }
