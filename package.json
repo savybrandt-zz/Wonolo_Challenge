@@ -9,9 +9,8 @@
   "main": "server.js",
   "scripts": {
     "test": "karma start",
-    "start": "nodemon server/server.js --exec babel-node presets es2015",
-    "heroku-postbuild": "nodemon server/server.js --exec babel-node presets es2015"
-  },
+    "start": "nodemon server/server.js --exec babel-node presets es2015"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/savybrandt/Wonolo_Challenge.git"
