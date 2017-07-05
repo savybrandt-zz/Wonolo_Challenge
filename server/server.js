@@ -1,5 +1,4 @@
 var app = require('./routes');
-var keys = require('../wonolo.config.js');
 
 var port = 3000;
 
