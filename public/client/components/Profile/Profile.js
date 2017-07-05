@@ -12,7 +12,7 @@ import EmployerJobs from "./EmployerJobs.js";
 export default class WorkButton extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {};
+		this.state = {		};
 	}
 
 	componentDidMount() {
@@ -43,19 +43,21 @@ export default class WorkButton extends React.Component {
 		return (
 			<div className="Profile">
 			<TopBar />
-				<Jumbotron className="yellow"></Jumbotron>
-				<Image src={this.state.pic || "https://www.wonolo.com/hs-fs/hubfs/2016-02_Wonolo_Redesign/wonolo-logo-yellow.png?t=1499175650282&width=44&name=wonolo-logo-yellow.png"} circle />
-				<div className="profileBar">
-					<h2>{this.state.name}</h2>
-					<Stars rating={this.state.rating}/>
-					<h4>{this.state.city}</h4>
+				<Jumbotron className="banner"></Jumbotron>
+				<div className="innerProfile">
+					<Image src={this.state.pic || "https://p4.zdassets.com/hc/settings_assets/627312/200102419/ck6qvPqFZxhptolVR7uEDQ-W_Logo.png"} circle />
+					<div className="profileBar">
+						<h2>{this.state.name}</h2>
+						<Stars rating={this.state.rating}/>
+						<h4>{this.state.city}</h4>
+					</div>
+					<Summary />
+					{this.state.wonoloer ? (
+						<Experience />) : (
+						<EmployerJobs id={this.props.id}/>
+						)}
+					<Badges badges={this.state.badges}/>
 				</div>
-				<Summary />
-				{this.state.wonoloer ? (
-					<Experience />) : (
-					<EmployerJobs id={this.props.id}/>
-					)}
-				<Badges badges={this.state.badges}/>
 				<BottomBar />
 			</div>
 		)

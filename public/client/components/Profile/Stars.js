@@ -1,11 +1,22 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-import { Link } from 'react-router';
+import ReactStars from 'react-stars';
 
 export default class Stars extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+
 	render() {
 		return (
-				<Button className={this.props.style}>Hire</Button>
+			<div className="Stars">
+				<ReactStars
+					count={5}
+					value={Math.round(this.props.rating * 2) / 2}
+					edit={false}
+					size={30}
+					color2={'#F7D91F'} />
+				<h6>{Math.round(this.props.rating * 10) / 10}</h6>
+			</div>
 			)
 	}
 }

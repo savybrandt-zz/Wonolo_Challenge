@@ -17,6 +17,27 @@ body {
 	width: 100%;
 }
 
+.Profile {
+	height: 100%;
+}
+
+.banner {
+	background-color: #FFDC00;
+	height: 150px;
+	border-bottom: solid 2px black;
+}
+
+.innerProfile {
+	padding: 0px 15% 5% 15%;
+}
+
+.profileBar {
+  display: inline-block;
+  height: 150px;
+  width: 70%;
+  padding-left: 20px;
+}
+
  td {
 	height: 297px;
 	width: 340px;
@@ -287,3 +308,9 @@ td:hover {
     font-weight: bold;
 }
 
+.img-circle {
+  height: 200px;
+  border-radius: 50%;
+  margin-top: -15%;
+  border: solid;
+}
