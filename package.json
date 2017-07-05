@@ -8,7 +8,7 @@
   "main": "server.js",
   "scripts": {
     "test": "karma start",
-    "start": "nodemon server/server.js",
+    "start": "nodemon server/server.js"
   },
   "repository": {
     "type": "git",
