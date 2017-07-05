@@ -11,7 +11,7 @@
     "test": "karma start",
     "start": "nodemon server/server.js --exec babel-node presets es2015",
     "prod": "NODE_ENV=production nodemon server/server.js",
-    "postinstall": "webpack -p"
+    "postinstall": "--exec babel-node presets es2015"
     },
   "repository": {
     "type": "git",
