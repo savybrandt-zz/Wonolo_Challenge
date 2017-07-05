@@ -7,8 +7,8 @@
   },
   "main": "server.js",
   "scripts": {
-    "test": "karma start",
-    "start": "nodemon server/server.js"
+    "build": "webpack --config webpack.prod.config.js",
+    "start": "npm run build nodemon server/server.js"
   },
   "repository": {
     "type": "git",
