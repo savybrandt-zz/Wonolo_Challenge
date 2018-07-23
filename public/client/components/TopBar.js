@@ -1,43 +1,17 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown, NavItem, MenuItem } from 'react-bootstrap';
 import { Link } from 'react-router'
-import LoginButton from "./Login/LoginButton.js";
-import ProfileTool from "./Profile/ProfileTool.js";
 
 export default class TopBar extends React.Component {
-		constructor(props) {
-		super(props);
-		this.state = {
-			user: false,
-			email: "yong@wonolo.com"
-		};
-	}
-
-	toggleLogin(email) {
-		console.log('email: ', email)
-		this.setState({
-			user: !this.state.user,
-			email: email
-		})
-	}
-
-  render() {
+ render() {
     return (
-      <Navbar inverse collapseOnSelect>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <a href="#"><img className="smallLogo" src="https://www.wonolo.com/hs-fs/hubfs/2016-02_Wonolo_Redesign/wonolo-logo-yellow.png?t=1498844569866&width=44&name=wonolo-logo-yellow.png"></img></a>
-          </Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
-          <Nav pullRight>
-            <NavItem eventKey={1}><Link to="/jobs" className="Link">Find a Job</Link></NavItem>
-            <NavItem eventKey={2}><Link to={this.state.user ? "/" + this.props.id + "/jobs" : "/"} className="Link">Post a Job</Link></NavItem>
-            <NavItem eventKey={3} >{this.state.user ? (<ProfileTool email={this.state.email} toggleLogin={this.toggleLogin.bind(this)}/>) : (<LoginButton toggleLogin={this.toggleLogin.bind(this)}/>)}</NavItem>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+      <div id="TopBar">
+        <a href="#"><img className="smallLogo" src="../images/moya_mainlogo.png"></img></a>
+        <div id="nav">
+          <Link to="/projects" className="Link">PROJECTS</Link>
+          <Link to="/about" className="Link">ABOUT</Link>
+          <Link to="/contact" className="Link">CONTACT</Link>
+        </div>
+      </div>
     );
   }
 }

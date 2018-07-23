@@ -1,377 +1,113 @@
-/* 
-	Wonolo-yellow: #FFDC00 
-	Wonolo-yellow2: #F7D91F
-*/
-
-body {
-	color: black;
-}
-
-.badge {
-    height: 155px;
-    width: 155px;
-    margin: 5px;
-    border: solid 1px #ccc;
-    padding: 5px;
-    color: black;
-    background: #ddd;
-    display: inline-block;
-}
-
-.SocialBar {
-	vertical-align: bottom;
-}
-.Summary {
-	margin-bottom: 10px;
-}
-
-.JobPage {
-	text-align: center;
-	min-height: 500px;
-	margin-bottom: 100px;
-}
-
-.jobDetails {
-	width: 90%;
-	margin: auto;
-}
-
-.Link, .Link:hover, .Link:active {
-	color: inherit;
-	text-decoration: none;
-}
-
-.App {
-	height: 100%;
-	width: 100%;
-}
-
-.profHeaders {
-  width: 30%;
-  display: inline-block;
-}
-
-.Profile {
-	height: 100%;
-}
-
-.jobHeader {
-	margin-top: -2%;
-}
-
-.Stars {
-	width: 150px;
-	margin: 0px 0px 0px 25px;
-	display: block;
-}
-
-.banner {
-	background-color: #FFDC00;
-	height: 150px;
-	border-bottom: solid 2px black;
-}
-
-.innerProfile {
-	padding: 0px 15% 5% 15%;
-}
-
-.profileBar {
-	height: 200px;
-	width: 90%;
-	margin-top: -200px;
-	margin-left: 220px;
-}
-
- td {
-	height: 297px;
-	width: 340px;
-	border: solid black;
- }
-
- .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
-    border: 3px solid black;
-}
-
-.yellow {
-	background: #FFDC00;
-	border: solid #FFDC00 1px;
-	color: black;
-	border: none;
-}
-
-.yellow:hover, .yellow:active, .yellow:visited {
-	background: #F7D91F !important;
-	color: black;
-	text-decoration: none;
-}
-
-.navbar {
-  position: relative;
-  min-height: 70px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
-  background-color: black;
-}
-
-.Welcome {
-	background-image: url("../images/wonoloLanding.jpg");
-	background-size: cover; 
-	height: 600px;
-	border: solid black;
-}
-
-.SearchJobs {
-	background-image: url("../images/boxes.jpg");
-	background-size: cover;
-	height: 350px;
-	border-bottom: solid 3px black;
-}
-
-.About {
-	padding-top: 0px;
+html, body, #app, #Home, #Projects, #About, #Contact, .App {
   height: 100%;
-}
-
-.padding {
-	padding: 20px;
-}
-
-.carousel {
-  width: 40%;
-  height: 100%;
-}
-
-.carousel.slide {
-  background: #FFDC00;
-}
-
-.iconFacts {
-  padding-top: 15px;
   width: 100%;
-  vertical-align: middle;
-}
-
-.businessReviews {
-  float: right;
-}
-
-.wonoloerReviews {
-	float: left;
-}
-
-.For {
-  background-color: white;
-  height: 300px;
   text-align: center;
-  width: 100%;
-  margin: 0px;
-  display: inline-block;
-  overflow: hidden;
 }
 
-.gap {
-  width: 100%;
-  height: 3px;
-  background: black;
-  margin-top: -3px;
+body{
+  background: url("../images/moya_background_asset.jpg") no-repeat fixed center;
+  background-size: cover; 
 }
 
-.jobSeakers, .Businesses {
-	width: 60%;
-	text-align: center;
+@font-face {
+  font-family: typoGraphica;
+  src: url("../images/typo_graphica.otf");
 }
 
-.jobSeakers {
-	border-left: solid black;
-	float: right;
-}
-
-.Businesses {
-	border-right: solid black; 
+.smallLogo{
+  height: 100px;
   float: left;
+  margin-left: 20px;
 }
 
-.BigLogo {
-	margin: auto;
-	display: block;
-	left: 0px;
-	top: 0px;
+#nav{
+  float: right;
+  margin-top: 45px;
+  font-family: typoGraphica;
+  letter-spacing: 0.2em;
+  margin-right: 20px;
 }
 
-.inWelcome {
-  padding-top: 70px;
-  display: block;
-  margin: auto;
-  height: 90%;
-  text-align: center;
+#TopBar{
+  height: 120px;
+  padding: 10px;
 }
 
-.splashButton {
-  background: #FFDC00;
-  border: solid black 1px;
-  margin: 40px;
+.main_content, .bigLogo{
+  padding: 50px;
+  max-width: 70%;
+  margin-top: 7%;
+  display: inline-block;
+}
+
+.main_content{
+  background: #cccccc40;
+}
+
+h2{
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;
+  font-weight: 100;
+  font-size: 1.5rem;
+  letter-spacing: 0.2em;
+  padding: 10px;
+  margin-bottom: 60px;
+  font-style: italic;
+}
+
+.title{
+  margin-bottom: 30px;
+}
+
+#Anatomy .title{
+  width: 35%;
+}
+
+#About .title, #Contact .title{
   width: 15%;
-  height: 15%;
-  font-size: xx-large;
-  color: black;
-  box-shadow: 1px 1px 1px black;
 }
 
-.splashButton:hover, .splashButton:active  {
-  background: black;
-  border: solid black 1px;
-  margin: 40px;
-  width: 15%;
-  height: 15%;
-  font-size: xx-large;
-  color: #FFDC00;
+#Gotal .title{
+  width: 60%;
 }
 
-.jumbotron {
-	margin: 0px;
+p{
+  color: #ecebeb;
+  font-weight: 100;
+  font-family: "Helvetica Neue";
+  letter-spacing: 0.1em;
 }
 
-.SearchJobs h1 {
-    font-size: 150px;
-    color: white;
+.Link{
+  color: #7f7f7f;
+  margin: 1em;
+  font-size: 12px;
 }
 
-.navbar {
-  position: relative;
-  min-height: 80px;
-  margin-bottom: 0;
-  border: 1px solid transparent;
-  background-color: black;
+.Link:hover, .Link:active {
+  color: white;
 }
 
-.BottomBar {
-	height: 200px;
-	background: black;
-	display: block;
-}
-
-.JobsView {
-	height: 100%;
-	text-align: center;
-	display: block;
-}
-
-.Grid {
-  width: 80%;
-  margin: auto;
-  padding: 30px;
-}
-
-.reviewImg {
-	background-size: contain;
-}
-
-.Tile {
-  vertical-align: middle;
-  text-align: center;
-  padding: 25% 0px 25% 0px;
-  top: 0px;
-  left: 0px;
-  color: black;
+a:hover{
   text-decoration: none;
+}
+
+#project-list{
+  margin-top: 15%;
+}
+
+.project-item{
+  color: white;
+}
+
+.project-item:hover, .project-item:active{
+  color: #7f7f7f;
+  text-decoration: none;
+}
+
+#Copyright{
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  height: 100%;
-}
-
-.Tile:hover {
-	text-decoration: none;
-	font-weight: bolder;
-}
-
-td:hover {
-	background: #FFDC00;
-	cursor: pointer;
-	border: solid black;
-	color: black;
-}
-
-.pagination>li>a, .pagination>li>span {
-    position: relative;
-    float: left;
-    padding: 6px 15px;
-    margin-left: -1px;
-    line-height: 1.42857143;
-    color: black;
-    text-decoration: none;
-    background-color: #fff;
-    border: 1px solid darkgrey;
-}
-
-.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
-    z-index: 2;
-    color: black;
-    background-color: #F7D91F;
-    border-color: darkgrey;
-}
-
-.pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
-    color: black;
-    cursor: not-allowed;
-    background-color: #fff;
-    border-color: darkgrey;
-}
-
-.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
-    z-index: 3;
-    color: black;
-    cursor: default;
-    background: #F7D91F;
-    border-color: darkgrey;
-}
-
-
-.navbar-right .dropdown-menu {
-    right: 0;
-    left: auto;
-    background: #F7D91F;
-    color: black;
-}
-
-.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
-    color: #333;
-    background-color: #F7D91F;
-    border-color: #8c8c8c;
-}
-
-.dropdown-menu .divider {
-    height: 1px;
-    margin: 9px 0;
-    overflow: hidden;
-    background-color: black;
-}
-
-.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
-    color: black;
-    text-decoration: none;
-    background: #F7D91F;
-    font-weight: bold;
-}
-
-.img-circle {
-	height: 200px;
-	border-radius: 50%;
-	border: solid;
-	position: relative;
-	margin-top: -5%;
-	display: block;
-}
-
-.panel {
-    margin-bottom: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    margin: 0px -10% 0px 0%;
-}
-
-.social-container {
-    width: 60%;
-    height: 60%;
+  font-style: italic;
+  font-size: 12px;
 }
