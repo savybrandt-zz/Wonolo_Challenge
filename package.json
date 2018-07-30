@@ -7,6 +7,7 @@
   },
   "main": "server.js",
   "scripts": {
+    "build": "webpack --config webpack.prod.config.js",
     "start": "nodemon server/server.js"
   },
   "repository": {
@@ -48,7 +49,6 @@
     "webpack-hot-middleware": "^2.15.0"
   },
   "devDependencies": {
-    "case-sensitive-paths-webpack-plugin": "^2.1.2",
     "react-social-icons": "^2.7.0"
   }
 }

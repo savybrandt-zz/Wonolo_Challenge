@@ -1,7 +1,5 @@
 var webpack = require('webpack');
 var path = require('path');
-var CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -25,8 +23,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CaseSensitivePathsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
   ]
 }
