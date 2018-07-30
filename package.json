@@ -49,6 +49,7 @@
     "webpack-hot-middleware": "^2.15.0"
   },
   "devDependencies": {
+    "case-sensitive-paths-webpack-plugin": "^2.1.2",
     "react-social-icons": "^2.7.0"
   }
 }
