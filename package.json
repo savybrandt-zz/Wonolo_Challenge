@@ -7,8 +7,8 @@
   },
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server/server.js",
-     "heroku-postbuild": "nodemon server/server.js --exec babel-node presets es2015"
+    "build": "webpack --config webpack.prod.config.js",
+    "start": "nodemon server/server.js"
   },
   "repository": {
     "type": "git",
