@@ -17,48 +17,7 @@ app.use(require("webpack-dev-middleware")(compiler, {
     noInfo: true, publicPath: webpackConfig.output.publicPath
 }));
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
-////////////////////////////////////////////////////////////////////////////////////////
-//                                  API Requests
-///////////////////////////////////////////////////////////////////////////////////////
-
-var wonolo = "https://api.wonolo.com/api_v2";
-var token = "tsGPS91X65zgmztANqon";
-
-app.get('/jobs/:page', function(req, res) {
-  request(wonolo + '/job_requests?token=' + token + '&per=21&page=' + req.params.page + '&state=approved', 
-  	function (err, data) { 
-  		err ? console.log(err) : res.send(data.body);
-  	})
-});
-
-app.get('/job/:id', function(req, res) {
-  request(wonolo + '/job_requests/' + req.params.id + '?token=' + token, 
-  	function (err, data) { 
-  		err ? console.log(err) : res.send(data.body);
-  	})
-});
-
-app.get('/user/:id', function(req, res) {
-  request(wonolo + '/users/' + req.params.id + '?token=' + token + '&id=' + req.params.id, 
-  	function (err, data) { 
-  		err ? console.log(err) : res.send(data.body);
-  	})
-});
-
-app.get('/users/:email', function(req, res) {
-  request(wonolo + '/users?token=' + token + '&email=' + req.params.email, 
-  	function (err, data) { 
-  		err ? console.log(err) : res.send(data.body);
-  	})
-});
-
-app.get('/badges/:id', function(req, res) {
-  request(wonolo + '/badges/' + req.params.id + '?token=' + token, 
-  	function (err, data) { 
-  		err ? console.log(err) : res.send(data.body);
-  	})
-});
 
 module.exports = app;
