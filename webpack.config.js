@@ -5,9 +5,9 @@ module.exports = {
   devtool: 'inline-source-map',
   entry: path.join(__dirname, 'public/client/index.js'),
   output: {
-    path: path.join(__dirname, 'public/build'),
+    path: path.join(__dirname, 'build'),
     filename: 'bundle.js',
-    publicPath: 'public/build'
+    publicPath: '/'
   },
   resolve: {
     modulesDirectories: ['node_modules', 'src'],
